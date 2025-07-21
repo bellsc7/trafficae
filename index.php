@@ -859,7 +859,7 @@ require_once 'auth_check.php';
         }
 
         const selectedDay = String(daySelector.value).padStart(2, '0');
-        const filename = `Traffic-aeo-${currentYear}${currentMonthFormatted}${selectedDay}.txt`;
+        const filename = `AEOthailand_TRAFFIC_${currentYear}${currentMonthFormatted}${selectedDay}.txt`;
         
         const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
         const link = document.createElement('a');
@@ -887,7 +887,7 @@ require_once 'auth_check.php';
         }
 
         const selectedDay = String(daySelector.value).padStart(2, '0');
-        const filename = `Traffic-aeo-${currentYear}${currentMonthFormatted}${selectedDay}.txt`;
+        const filename = `AEOthailand_TRAFFIC_${currentYear}${currentMonthFormatted}${selectedDay}.txt`;
 
         // แสดงสถานะกำลังส่ง
         const originalStatus = fileStatusElement.textContent;

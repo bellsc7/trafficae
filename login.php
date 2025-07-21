@@ -10,16 +10,38 @@ if (isLoggedIn()) {
 $error = '';
 $success = '';
 
+// จัดการข้อความจาก URL parameters
+if (isset($_GET['message'])) {
+    switch ($_GET['message']) {
+        case 'logout_success':
+            $success = 'ออกจากระบบเรียบร้อยแล้ว';
+            break;
+        case 'session_expired':
+            $error = 'Session หมดอายุ กรุณาเข้าสู่ระบบใหม่';
+            break;
+    }
+}
+
 // ประมวลผลการ Login
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'] ?? '';
     $password = $_POST['password'] ?? '';
     $csrf_token = $_POST['csrf_token'] ?? '';
     
-    // ตรวจสอบ CSRF Token
-    if (!validateCSRF($csrf_token)) {
-        $error = 'การตรวจสอบความปลอดภัยล้มเหลว กรุณาลองใหม่';
-        logActivity('CSRF_FAILED', "Username: $username");
+    // Debug CSRF Token (เฉพาะในการพัฒนา - ลบออกในการใช้งานจริง)
+    error_log("CSRF Debug - Session Token: " . ($_SESSION['csrf_token'] ?? 'NOT_SET'));
+    error_log("CSRF Debug - Posted Token: " . $csrf_token);
+    error_log("CSRF Debug - IP: " . ($_SERVER['REMOTE_ADDR'] ?? 'UNKNOWN'));
+    
+    // ตรวจสอบ CSRF Token - แต่ให้ยืดหยุ่นมากขึ้น
+    if (empty($csrf_token)) {
+        $error = 'ข้อมูลความปลอดภัยหายไป กรุณาลองใหม่';
+        logActivity('CSRF_MISSING', "Username: $username");
+    } elseif (!validateCSRF($csrf_token)) {
+        // สร้าง token ใหม่และให้โอกาสอีกครั้ง
+        $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+        $error = 'การตรวจสอบความปลอดภัยล้มเหลว กรุณาลองใหม่อีกครั้ง';
+        logActivity('CSRF_FAILED', "Username: $username, IP: " . ($_SERVER['REMOTE_ADDR'] ?? 'Unknown'));
     } else {
         // ตรวจสอบข้อมูลที่กรอก
         if (empty($username) || empty($password)) {
@@ -482,9 +504,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </button>
             </form>
 
+            <div class="demo-info">
+                <h3><i class="fas fa-info-circle"></i> บัญชีผู้ใช้ทดสอบ</h3>
+                <div class="demo-accounts">
+                    <div class="demo-account">
+                        <span class="username">admin</span>
+                        <span class="password">AEO@2024!</span>
+                    </div>
+                    <div class="demo-account">
+                        <span class="username">traffic</span>
+                        <span class="password">Traffic123!</span>
+                    </div>
+                    <div class="demo-account">
+                        <span class="username">aeo</span>
+                        <span class="password">AEO@Traffic2024</span>
+                    </div>
+                </div>
+            </div>
 
             <div class="footer-text">
                 © <?php echo date('Y'); ?> PACIFICA GROUP » TRAFFIC FEED AMERICAN EAGLE
+                <br><br>
+                <?php if ($_SERVER['REMOTE_ADDR'] === '127.0.0.1' || $_SERVER['REMOTE_ADDR'] === '::1'): ?>
+                    <small><a href="debug_session.php" style="color: #999;">🔍 Debug Session Info</a></small>
+                <?php endif; ?>
             </div>
         </div>
     </div>
@@ -505,8 +548,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         // Form Submission with Loading State
-        document.getElementById('loginForm').addEventListener('submit', function() {
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
             const btn = document.getElementById('loginBtn');
+            
+            // Debug CSRF token ก่อนส่ง
+            const csrfToken = document.querySelector('input[name="csrf_token"]').value;
+            console.log('CSRF Token being sent:', csrfToken);
+            console.log('Form data:', new FormData(this));
+            
             btn.classList.add('loading');
             btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> กำลังเข้าสู่ระบบ...';
         });

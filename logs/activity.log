@@ -9,3 +9,97 @@
 [2025-07-21 15:16:05] [::1] [Traffic Manager] LOGOUT - User logged out
 [2025-07-21 15:16:14] [::1] [AEO Operator] LOGIN_SUCCESS - User: aeo
 [2025-07-21 15:16:36] [::1] [AEO Operator] LOGOUT - User logged out
+[2025-07-21 15:41:57] [10.20.3.66] [Guest] CSRF_FAILED - Username: admin
+[2025-07-21 15:42:51] [10.20.3.66] [Guest] CSRF_FAILED - Username: admin
+[2025-07-21 15:42:54] [10.20.3.66] [Guest] CSRF_FAILED - Username: admin
+[2025-07-21 15:43:03] [::1] [Administrator] LOGIN_SUCCESS - User: admin
+[2025-07-21 15:43:06] [10.20.3.66] [Guest] CSRF_FAILED - Username: admin
+[2025-07-21 15:43:11] [::1] [Administrator] LOGOUT - User logged out
+[2025-07-21 15:43:20] [10.20.3.66] [Guest] CSRF_FAILED - Username: admin
+[2025-07-21 15:43:32] [10.20.3.66] [Guest] CSRF_FAILED - Username: admin
+[2025-07-21 15:44:11] [::1] [Traffic Manager] LOGIN_SUCCESS - User: traffic
+[2025-07-21 15:44:29] [::1] [Traffic Manager] LOGOUT - User logged out
+[2025-07-21 15:45:08] [10.20.3.66] [Guest] CSRF_FAILED - Username: traffic
+[2025-07-21 15:57:52] [::1] [Guest] LOGIN_FAILED - Username: admin
+[2025-07-21 16:09:17] [10.20.3.66] [Administrator] LOGIN_SUCCESS - User: admin
+[2025-07-21 16:09:30] [10.20.3.66] [Administrator] LOGOUT - User logged out
+[2025-07-21 16:09:33] [10.20.3.66] [Traffic Manager] LOGIN_SUCCESS - User: traffic
+[2025-07-21 16:09:39] [10.20.3.66] [Traffic Manager] LOGOUT - User logged out
+[2025-07-21 16:09:43] [10.20.3.66] [Administrator] LOGIN_SUCCESS - User: admin
+[2025-07-21 16:10:14] [10.20.3.66] [Administrator] FILE_UPLOAD - File: Y2G 2025.xlsx
+[2025-07-21 16:10:17] [10.20.3.66] [Administrator] SFTP_UPLOAD_START - File: Traffic-aeo-20250718.txt, Size: 494 bytes
+[2025-07-21 16:10:17] [10.20.3.66] [Administrator] SFTP_UPLOAD_SUCCESS - File: Traffic-aeo-20250718.txt uploaded successfully
+[2025-07-21 16:10:17] [10.20.3.66] [Administrator] SFTP_UPLOAD_ATTEMPT - Attempting SFTP upload
+[2025-07-21 16:10:23] [10.20.3.66] [Administrator] SFTP_UPLOAD_ATTEMPT - Attempting SFTP upload
+[2025-07-21 16:10:23] [10.20.3.66] [Administrator] SFTP_UPLOAD_START - File: Traffic-aeo-20250719.txt, Size: 494 bytes
+[2025-07-21 16:10:24] [10.20.3.66] [Administrator] SFTP_UPLOAD_SUCCESS - File: Traffic-aeo-20250719.txt uploaded successfully
+[2025-07-21 16:10:30] [10.20.3.66] [Administrator] SFTP_UPLOAD_START - File: Traffic-aeo-20250720.txt, Size: 494 bytes
+[2025-07-21 16:10:30] [10.20.3.66] [Administrator] SFTP_UPLOAD_SUCCESS - File: Traffic-aeo-20250720.txt uploaded successfully
+[2025-07-21 16:10:30] [10.20.3.66] [Administrator] SFTP_UPLOAD_ATTEMPT - Attempting SFTP upload
+[2025-07-21 16:11:38] [10.20.3.66] [Administrator] FILE_UPLOAD - File: Y2G 2025.xlsx
+[2025-07-21 16:11:40] [10.20.3.66] [Administrator] SFTP_UPLOAD_START - File: Traffic-aeo-20250718.txt, Size: 494 bytes
+[2025-07-21 16:11:41] [10.20.3.66] [Administrator] SFTP_UPLOAD_SUCCESS - File: Traffic-aeo-20250718.txt uploaded successfully
+[2025-07-21 16:11:41] [10.20.3.66] [Administrator] SFTP_UPLOAD_ATTEMPT - Attempting SFTP upload
+[2025-07-21 16:11:45] [10.20.3.66] [Administrator] SFTP_UPLOAD_START - File: Traffic-aeo-20250719.txt, Size: 494 bytes
+[2025-07-21 16:11:45] [10.20.3.66] [Administrator] SFTP_UPLOAD_SUCCESS - File: Traffic-aeo-20250719.txt uploaded successfully
+[2025-07-21 16:11:45] [10.20.3.66] [Administrator] SFTP_UPLOAD_ATTEMPT - Attempting SFTP upload
+[2025-07-21 16:11:48] [10.20.3.66] [Administrator] SFTP_UPLOAD_START - File: Traffic-aeo-20250720.txt, Size: 494 bytes
+[2025-07-21 16:11:48] [10.20.3.66] [Administrator] SFTP_UPLOAD_SUCCESS - File: Traffic-aeo-20250720.txt uploaded successfully
+[2025-07-21 16:11:48] [10.20.3.66] [Administrator] SFTP_UPLOAD_ATTEMPT - Attempting SFTP upload
+[2025-07-21 16:12:04] [10.20.3.66] [Administrator] LOGOUT - User logged out
+[2025-07-21 16:12:08] [10.20.3.66] [Administrator] LOGIN_SUCCESS - User: admin
+[2025-07-21 16:12:13] [10.20.3.66] [Administrator] SFTP_UPLOAD_ATTEMPT - Attempting SFTP upload
+[2025-07-21 16:12:15] [10.20.3.66] [Administrator] FILE_UPLOAD - File: Y2G 2025.xlsx
+[2025-07-21 16:12:17] [10.20.3.66] [Administrator] SFTP_UPLOAD_START - File: Traffic-aeo-20250718.txt, Size: 494 bytes
+[2025-07-21 16:12:17] [10.20.3.66] [Administrator] SFTP_UPLOAD_SUCCESS - File: Traffic-aeo-20250718.txt uploaded successfully
+[2025-07-21 16:12:17] [10.20.3.66] [Administrator] SFTP_UPLOAD_ATTEMPT - Attempting SFTP upload
+[2025-07-21 16:12:20] [10.20.3.66] [Administrator] SFTP_UPLOAD_START - File: Traffic-aeo-20250719.txt, Size: 494 bytes
+[2025-07-21 16:12:20] [10.20.3.66] [Administrator] SFTP_UPLOAD_SUCCESS - File: Traffic-aeo-20250719.txt uploaded successfully
+[2025-07-21 16:12:20] [10.20.3.66] [Administrator] SFTP_UPLOAD_ATTEMPT - Attempting SFTP upload
+[2025-07-21 16:12:23] [10.20.3.66] [Administrator] SFTP_UPLOAD_START - File: Traffic-aeo-20250720.txt, Size: 494 bytes
+[2025-07-21 16:12:23] [10.20.3.66] [Administrator] SFTP_UPLOAD_SUCCESS - File: Traffic-aeo-20250720.txt uploaded successfully
+[2025-07-21 16:12:23] [10.20.3.66] [Administrator] SFTP_UPLOAD_ATTEMPT - Attempting SFTP upload
+[2025-07-21 16:12:41] [10.20.3.66] [Administrator] LOGOUT - User logged out
+[2025-07-21 16:12:47] [10.20.3.66] [Administrator] LOGIN_SUCCESS - User: admin
+[2025-07-21 16:12:52] [10.20.3.66] [Administrator] FILE_UPLOAD - File: Y2G 2025.xlsx
+[2025-07-21 16:12:56] [10.20.3.66] [Administrator] SFTP_UPLOAD_START - File: Traffic-aeo-20250718.txt, Size: 494 bytes
+[2025-07-21 16:12:57] [10.20.3.66] [Administrator] SFTP_UPLOAD_SUCCESS - File: Traffic-aeo-20250718.txt uploaded successfully
+[2025-07-21 16:12:57] [10.20.3.66] [Administrator] SFTP_UPLOAD_ATTEMPT - Attempting SFTP upload
+[2025-07-21 16:15:49] [10.20.3.66] [Administrator] LOGOUT - User logged out
+[2025-07-21 16:15:54] [10.20.3.66] [Administrator] LOGIN_SUCCESS - User: admin
+[2025-07-21 16:16:00] [10.20.3.66] [Administrator] FILE_UPLOAD - File: Y2G 2025.xlsx
+[2025-07-21 16:16:04] [10.20.3.66] [Administrator] SFTP_ERROR - ชื่อไฟล์ไม่ถูกต้องตามรูปแบบที่กำหนด
+[2025-07-21 16:16:04] [10.20.3.66] [Administrator] SFTP_UPLOAD_ATTEMPT - Attempting SFTP upload
+[2025-07-21 16:16:12] [10.20.3.66] [Administrator] SFTP_ERROR - ชื่อไฟล์ไม่ถูกต้องตามรูปแบบที่กำหนด
+[2025-07-21 16:16:12] [10.20.3.66] [Administrator] SFTP_UPLOAD_ATTEMPT - Attempting SFTP upload
+[2025-07-21 16:16:33] [10.20.3.66] [Administrator] LOGOUT - User logged out
+[2025-07-21 16:16:44] [10.20.3.66] [Administrator] LOGIN_SUCCESS - User: admin
+[2025-07-21 16:16:49] [10.20.3.66] [Administrator] FILE_UPLOAD - File: Y2G 2025.xlsx
+[2025-07-21 16:16:55] [10.20.3.66] [Administrator] SFTP_UPLOAD_START - File: Traffic-aeo-20250718.txt, Size: 494 bytes
+[2025-07-21 16:16:55] [10.20.3.66] [Administrator] SFTP_UPLOAD_SUCCESS - File: Traffic-aeo-20250718.txt uploaded successfully
+[2025-07-21 16:16:55] [10.20.3.66] [Administrator] SFTP_UPLOAD_ATTEMPT - Attempting SFTP upload
+[2025-07-21 16:19:04] [10.20.3.66] [Administrator] LOGOUT - User logged out
+[2025-07-21 16:19:45] [10.20.3.66] [Administrator] LOGIN_SUCCESS - User: admin
+[2025-07-21 16:19:48] [10.20.3.66] [Administrator] FILE_UPLOAD - File: Y2G 2025.xlsx
+[2025-07-21 16:19:52] [10.20.3.66] [Administrator] SFTP_UPLOAD_ATTEMPT - Attempting SFTP upload
+[2025-07-21 16:19:52] [10.20.3.66] [Administrator] SFTP_ERROR - ชื่อไฟล์ไม่ถูกต้องตามรูปแบบที่กำหนด
+[2025-07-21 16:20:08] [10.20.3.66] [Administrator] LOGOUT - User logged out
+[2025-07-21 16:20:12] [10.20.3.66] [Administrator] LOGIN_SUCCESS - User: admin
+[2025-07-21 16:20:17] [10.20.3.66] [Administrator] FILE_UPLOAD - File: Y2G 2025.xlsx
+[2025-07-21 16:20:21] [10.20.3.66] [Administrator] SFTP_UPLOAD_ATTEMPT - Attempting SFTP upload
+[2025-07-21 16:20:21] [10.20.3.66] [Administrator] SFTP_UPLOAD_START - File: Traffic-aeo-20250718.txt, Size: 494 bytes
+[2025-07-21 16:20:21] [10.20.3.66] [Administrator] SFTP_UPLOAD_SUCCESS - File: Traffic-aeo-20250718.txt uploaded successfully
+[2025-07-21 16:32:37] [10.20.3.66] [Administrator] LOGOUT - User logged out
+[2025-07-21 16:32:43] [10.20.3.66] [Administrator] LOGIN_SUCCESS - User: admin
+[2025-07-21 16:32:47] [10.20.3.66] [Administrator] FILE_UPLOAD - File: Y2G 2025.xlsx
+[2025-07-21 16:32:52] [10.20.3.66] [Administrator] SFTP_UPLOAD_ATTEMPT - Attempting SFTP upload
+[2025-07-21 16:32:52] [10.20.3.66] [Administrator] SFTP_UPLOAD_START - File: AEOthailand_TRAFFIC_20250720.txt, Size: 494 bytes
+[2025-07-21 16:32:52] [10.20.3.66] [Administrator] SFTP_UPLOAD_SUCCESS - File: AEOthailand_TRAFFIC_20250720.txt uploaded successfully
+[2025-07-21 16:32:56] [10.20.3.66] [Administrator] SFTP_UPLOAD_ATTEMPT - Attempting SFTP upload
+[2025-07-21 16:32:56] [10.20.3.66] [Administrator] SFTP_UPLOAD_START - File: AEOthailand_TRAFFIC_20250719.txt, Size: 494 bytes
+[2025-07-21 16:32:57] [10.20.3.66] [Administrator] SFTP_UPLOAD_SUCCESS - File: AEOthailand_TRAFFIC_20250719.txt uploaded successfully
+[2025-07-21 16:33:00] [10.20.3.66] [Administrator] SFTP_UPLOAD_ATTEMPT - Attempting SFTP upload
+[2025-07-21 16:33:00] [10.20.3.66] [Administrator] SFTP_UPLOAD_START - File: AEOthailand_TRAFFIC_20250718.txt, Size: 494 bytes
+[2025-07-21 16:33:00] [10.20.3.66] [Administrator] SFTP_UPLOAD_SUCCESS - File: AEOthailand_TRAFFIC_20250718.txt uploaded successfully
+[2025-07-21 16:33:18] [10.20.3.66] [Administrator] LOGOUT - User logged out
+[2025-07-21 16:33:21] [10.20.3.66] [Administrator] LOGIN_SUCCESS - User: admin

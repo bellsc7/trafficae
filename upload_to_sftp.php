@@ -43,8 +43,8 @@ $filename = $_POST['filename'];
 $content  = $_POST['content'];
 
 // ตรวจสอบความปลอดภัยของชื่อไฟล์
-if (!preg_match('/^Traffic-aeo-\d{8}\.txt$/', $filename)) {
-    send_error('ชื่อไฟล์ไม่ถูกต้องตามรูปแบบที่กำหนด');
+if (!preg_match('/^AEOthailand_TRAFFIC_\d{8}\.txt$/', $filename)) {
+    send_error('ชื่อไฟล์ไม่ถูกต้องตามรูปแบบที่กำหนด (ต้องเป็น AEOthailand_TRAFFIC_YYYYMMDD.txt)');
 }
 
 // ตรวจสอบขนาดไฟล์ (จำกัดที่ 10MB)

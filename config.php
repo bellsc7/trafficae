@@ -1,11 +1,22 @@
 <?php
-// ตั้งค่าการรักษาความปลอดภัย Session
+// ตั้งค่าการรักษาความปลอดภัย Session แบบ Cross-Network
 ini_set('session.cookie_httponly', 1);
-ini_set('session.cookie_secure', 1);
+ini_set('session.cookie_secure', 0); // เปลี่ยนเป็น 0 เพื่อรองรับ HTTP
 ini_set('session.use_strict_mode', 1);
+ini_set('session.cookie_samesite', 'Lax'); // รองรับ cross-site
+ini_set('session.gc_maxlifetime', 28800); // 8 ชั่วโมง
+
+// ตั้งค่า Session Name ให้เหมาะสม
+session_name('AEO_TRAFFIC_SESSION');
 
 // เริ่ม Session
 session_start();
+
+// ป้องกันปัญหา Session Fixation
+if (!isset($_SESSION['initiated'])) {
+    session_regenerate_id();
+    $_SESSION['initiated'] = true;
+}
 
 // ตั้งค่าผู้ใช้งาน (สามารถเพิ่มผู้ใช้ได้ที่นี่)
 $users = [
@@ -60,14 +71,26 @@ function logoutUser() {
     session_destroy();
 }
 
-// ฟังก์ชันตรวจสอบ CSRF Token
+// ฟังก์ชันตรวจสอบ CSRF Token แบบยืดหยุ่น
 function validateCSRF($token) {
-    return isset($_SESSION['csrf_token']) && hash_equals($_SESSION['csrf_token'], $token);
+    // ถ้าไม่มี session token ให้สร้างใหม่
+    if (!isset($_SESSION['csrf_token'])) {
+        $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+        return false;
+    }
+    
+    // ตรวจสอบว่า token ไม่ว่าง
+    if (empty($token) || empty($_SESSION['csrf_token'])) {
+        return false;
+    }
+    
+    // ใช้ hash_equals เพื่อป้องกัน timing attack
+    return hash_equals($_SESSION['csrf_token'], $token);
 }
 
 // ฟังก์ชันสร้าง CSRF Token สำหรับ Form
 function getCSRFToken() {
-    if (!isset($_SESSION['csrf_token'])) {
+    if (!isset($_SESSION['csrf_token']) || empty($_SESSION['csrf_token'])) {
         $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
     }
     return $_SESSION['csrf_token'];
