@@ -1,0 +1,11 @@
+[2025-07-21 15:13:48] [::1] [Guest] LOGIN_FAILED - Username: admin
+[2025-07-21 15:14:07] [::1] [Guest] LOGIN_FAILED - Username: Admin
+[2025-07-21 15:14:13] [::1] [Guest] LOGIN_FAILED - Username: Admin
+[2025-07-21 15:14:25] [::1] [Guest] LOGIN_FAILED - Username: Admin
+[2025-07-21 15:14:59] [::1] [Guest] LOGIN_FAILED - Username: Administrator
+[2025-07-21 15:15:16] [::1] [Administrator] LOGIN_SUCCESS - User: admin
+[2025-07-21 15:15:44] [::1] [Administrator] LOGOUT - User logged out
+[2025-07-21 15:15:56] [::1] [Traffic Manager] LOGIN_SUCCESS - User: traffic
+[2025-07-21 15:16:05] [::1] [Traffic Manager] LOGOUT - User logged out
+[2025-07-21 15:16:14] [::1] [AEO Operator] LOGIN_SUCCESS - User: aeo
+[2025-07-21 15:16:36] [::1] [AEO Operator] LOGOUT - User logged out
